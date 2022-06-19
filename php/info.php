@@ -5,7 +5,7 @@ $database = "todo";
 $table = "todo_items";
 
 try {
-  $db = new PDO("mysql:host=mariadb.inception;dbname=$database", 'root', 'root');
+  $db = new PDO("mysql:host=mariadb.inception;port=3306;dbname=$database", 'alabalet', '12345');
   echo "<h2>TODO</h2><ol>"; 
   foreach($db->query("SELECT content FROM $table") as $row) {
     echo "<li>" . $row['content'] . "</li>";
