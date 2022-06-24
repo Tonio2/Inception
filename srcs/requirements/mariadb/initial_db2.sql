@@ -1,3 +1,4 @@
 CREATE DATABASE wordpress DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 GRANT ALL ON wordpress.* TO 'alabalet'@'%' IDENTIFIED BY 'gigachad';
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'root12345';
 FLUSH PRIVILEGES;
