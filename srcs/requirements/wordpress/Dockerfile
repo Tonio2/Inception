@@ -13,6 +13,7 @@ RUN	apt update && apt install -y \
 	php-xml \
 	php-xmlrpc \
 	php-zip \
+	sendmail \
 	wget
 
 EXPOSE 9000
