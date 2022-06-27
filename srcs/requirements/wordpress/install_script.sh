@@ -12,7 +12,7 @@ if [ ! -f /var/www/html/wp-config.php ]; then
     cd /var/www/html;
     wp core download --allow-root;
     mv /var/www/wp-config.php /var/www/html/
-    wp core install --allow-root --url=${URL} --title="wordpress" --admin_user=${DB_USER} --admin_password=${DB_USER_PWD} --admin_email="gigachad@42.fr"
+    wp core install --allow-root --url=${URL} --title="wordpress" --admin_user=${WP_ADMIN} --admin_password=${WP_ADMIN_PWD} --skip-email
     wp user create --allow-root ${DB_USER} "alabalet@42.fr" --user_pass=${DB_USER_PWD};
     wp theme install inspiro --activate --allow-root
 fi
