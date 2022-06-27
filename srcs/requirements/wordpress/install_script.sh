@@ -5,10 +5,10 @@ chmod -R 755 /var/www/*;
 mkdir -p /run/php/;
 touch /run/php/php7.3-fpm.pid;
 if [ ! -f /var/www/html/wp-config.php ]; then
-    mkdir -p /var/www/html;
     wget https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar;
     chmod +x wp-cli.phar; 
     mv wp-cli.phar /usr/local/bin/wp;
+    mkdir -p /var/www/html;
     cd /var/www/html;
     wp core download --allow-root;
     mv /var/www/wp-config.php /var/www/html/
