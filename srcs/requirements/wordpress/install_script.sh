@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "hello"
 chown -R www-data:www-data /var/www/*;
-chown -R 755 /var/www/*;
+chmod -R 755 /var/www/*;
 mkdir -p /run/php/;
 touch /run/php/php7.3-fpm.pid;
 if [ ! -f /var/www/html/wp-config.php ]; then

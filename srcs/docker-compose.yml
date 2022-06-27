@@ -1,3 +1,8 @@
+networks:
+  inception:
+    name: inception
+    driver: bridge
+
 volumes:
   wp:
     driver: local
@@ -22,6 +27,8 @@ services:
       - .env
     volumes:
       - db:/var/lib/mysql
+    networks:
+      - inception
     restart: always
   
   wordpress:
@@ -33,6 +40,8 @@ services:
       - mariadb
     volumes:
       - wp:/var/www/html
+    networks:
+      - inception
     restart: always
 
   nginx:
@@ -40,9 +49,10 @@ services:
     build: ./requirements/nginx
     ports:
       - "443:443"
-      - "80:80"
     depends_on:
       - wordpress
     volumes:
       - wp:/var/www/html
+    networks:
+      - inception
     restart: always
