@@ -3,18 +3,19 @@ FROM debian:buster
 RUN	apt update
 RUN apt upgrade
 RUN apt install -y \
-	php \
-	php-common \
-	php-fpm \
-	php-mysql \
-	php-curl \
-	php-gd \
-	php-intl \
-	php-mbstring \
-	php-soap \
-	php-xml \
-	php-xmlrpc \
-	php-zip \
+	php7.3 \
+	php7.3-common \
+	php7.3-fpm \
+	php7.3-mysql \
+	php7.3-curl \
+	php7.3-gd \
+	php7.3-intl \
+	php7.3-mbstring \
+	php7.3-soap \
+	php7.3-xml \
+	php7.3-imap \
+	php7.3-xmlrpc \
+	php7.3-zip \
 	sendmail \
 	wget
 
