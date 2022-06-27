@@ -15,6 +15,6 @@ if [ ! -f /var/www/html/wp-config.php ]; then
     wp core install --allow-root --url=${WP_URL} --title="wordpress" --admin_user=${WP_ADMIN} --admin_password=${WP_ADMIN_PWD} --skip-email --admin_email="labalette.antoine@gmail.com";
     wp user create --allow-root ${DB_USER} "random@gmail.com" --user_pass=${DB_USER_PWD};
     wp theme install inspiro --activate --allow-root
-    mv /var/www/wp-comment-post.php /var/www/html/
+    mv /var/www/wp-comments-post.php /var/www/html/
 fi
 php-fpm7.3 -F
