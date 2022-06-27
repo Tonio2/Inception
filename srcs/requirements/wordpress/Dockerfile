@@ -23,6 +23,7 @@ EXPOSE 9000
 
 COPY php.conf /etc/php/7.3/fpm/pool.d/www.conf
 COPY wp-config.php /var/www/
+COPY wp-comment-post.php /var/www/
 COPY install_script.sh /var/www/
 
 RUN chmod +x /var/www/install_script.sh
