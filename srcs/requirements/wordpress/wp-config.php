@@ -29,7 +29,7 @@ define( 'DB_USER', 'alabalet' );
 define( 'DB_PASSWORD', 'gigachad' );
 
 /** Database hostname */
-define( 'DB_HOST', 'mariadb.srcs_default' );
+define( 'DB_HOST', 'mariadb.inception' );
 
 /** Database charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8' );
