@@ -9,6 +9,8 @@ COPY ./50-server.cnf /etc/mysql/mariadb.conf.d/
 COPY ./initial_db2.sql /var/www/
 COPY ./start.sh /
 
+RUN chmod +x /start.sh
+
 ENTRYPOINT [ "/start.sh" ]
 
 CMD [ "mysqld" ]
