@@ -6,10 +6,11 @@ networks:
 services:
   mariadb:
     container_name: mariadb
-    build: ./requirements/mariadb
-    environment:
-      DB_USER_PWD:  ${DB_USER_PWD}
-      DB_ADMIN_PWD: ${DB_ADMIN_PWD}
+    build: 
+      context: ./requirements/mariadb
+      args:
+        DB_USER_PWD:  ${DB_USER_PWD}
+        DB_ADMIN_PWD: ${DB_ADMIN_PWD}
     volumes:
       - db:/var/lib/mysql
     networks:
