@@ -9,7 +9,7 @@ services:
     build: ./requirements/mariadb
     environment:
       DB_USER_PWD:  ${DB_USER_PWD}
-      BD_ADMIN_PWD: ${DB_ADMIN_PWD}
+      DB_ADMIN_PWD: ${DB_ADMIN_PWD}
     volumes:
       - db:/var/lib/mysql
     networks:
