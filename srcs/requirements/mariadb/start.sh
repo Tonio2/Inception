@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ -f /var/www/old_db.sql ]
+if [ -f /var/www/old_db.sql ]; then
     echo "Initializing wordpress database"
     service mysql start;
     mysql < /var/www/initial_db2.sql;
