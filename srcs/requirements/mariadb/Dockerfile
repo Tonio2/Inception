@@ -7,6 +7,7 @@ RUN apt-get install -y mariadb-server
 
 COPY ./50-server.cnf /etc/mysql/mariadb.conf.d/
 COPY ./initial_db.sh /var/www/
+RUN touch /var/www/initial_db2.sql
 RUN chmod +x /var/www/initial_db.sh
 RUN sh /var/www/initial_db.sh
 RUN service mysql start && mysql < /var/www/initial_db2.sql && rm -f /var/www/initial_db2.sql
