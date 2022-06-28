@@ -10,8 +10,6 @@ services:
     environment:
       DB_USER_PWD:  ${DB_USER_PWD}
       BD_ADMIN_PWD: ${DB_ADMIN_PWD}
-    env_file:
-      - .env
     volumes:
       - db:/var/lib/mysql
     networks:
