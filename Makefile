@@ -1,4 +1,5 @@
 all:
+	chmod +x ./start.sh
 	./start.sh
 	docker compose -f ./srcs/docker-compose.yml up
 
