@@ -6,8 +6,7 @@ all:
 down:
 	docker compose -f ./srcs/docker-compose.yml down
 
-re: clean
-	docker compose -f srcs/docker-compose.yml up --build
+re: clean all
 
 clean:
 	docker stop $$(docker ps -qa);\
