@@ -3,22 +3,6 @@ networks:
     name: inception
     driver: bridge
 
-volumes:
-  wp:
-    driver: local
-    name: wp
-    driver_opts:
-      type: none
-      o: bind
-      device: /home/alabalet/data/wordpress
-  db:
-    driver: local
-    name: db
-    driver_opts:
-      type: none
-      o: bind
-      device: /home/alabalet/data/mariadb
-
 services:
   mariadb:
     container_name: mariadb
@@ -56,3 +40,19 @@ services:
     networks:
       - inception
     restart: always
+
+volumes:
+  wp:
+    driver: local
+    name: wp
+    driver_opts:
+      type: none
+      o: bind
+      device: /home/alabalet/data/wordpress
+  db:
+    driver: local
+    name: db
+    driver_opts:
+      type: none
+      o: bind
+      device: /home/alabalet/data/mariadb
