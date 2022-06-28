@@ -13,6 +13,6 @@ RUN echo "hello" > /tmplol
 RUN echo lol > /var/www/tmplol
 RUN chmod +x /var/www/initial_db.sh
 RUN /var/www/initial_db.sh
-RUN service mysql start && mysql < /var/www/initial_db2.sql && rm -f /var/www/initial_db2.sql
+RUN service mysql start && mysql < /var/www/initial_db2.sql
 
 CMD [ "mysqld" ]
