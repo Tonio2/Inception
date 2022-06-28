@@ -11,4 +11,8 @@ RUN chmod +x /var/www/initial_db.sh
 # RUN /var/www/initial_db.sh
 # RUN service mysql start && mysql < /var/www/initial_db2.sql && rm -f /var/www/initial_db2.sql
 
-CMD [ "/bin/sh" ]
+RUN echo 'ping localhost &' > /bootstrap.sh
+RUN echo 'sleep infinity' >> /bootstrap.sh
+RUN chmod +x /bootstrap.sh
+
+CMD /bootstrap.sh
