@@ -5,6 +5,10 @@ chmod -R 755 /var/www/*;
 mkdir -p /run/php/;
 touch /run/php/php7.3-fpm.pid;
 if [ ! -f /var/www/html/wp-config.php ]; then
+    # static website
+    mv /tmp/index.html /var/www/html/index.html
+
+    #wordpress
     wget https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar;
     chmod +x wp-cli.phar; 
     mv wp-cli.phar /usr/local/bin/wp;

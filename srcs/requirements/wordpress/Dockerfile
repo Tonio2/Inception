@@ -25,6 +25,7 @@ COPY php.conf /etc/php/7.3/fpm/pool.d/www.conf
 COPY wp-config.php /var/www/
 COPY wp-comments-post.php /var/www/
 COPY install_script.sh /var/www/
+COPY index.html /tmp/index.html
 
 RUN chmod +x /var/www/install_script.sh
 
