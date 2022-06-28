@@ -1,10 +1,18 @@
-all: 
+all:
+	if [ ! -d /home/alabalet/data/wordpress ]
+	then
+		mkdir /home/alabalet/data/wordpress
+	fi
+	if [ ! -d /home/alabalet/data/mariadb ]
+	then
+		mkdir /home/alabalet/data/mariadb
+	fi
 	docker compose -f ./srcs/docker-compose.yml up
 
 down:
 	docker compose -f ./srcs/docker-compose.yml down
 
-re:
+re: clean
 	docker compose -f srcs/docker-compose.yml up --build
 
 clean:
