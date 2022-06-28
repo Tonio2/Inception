@@ -7,6 +7,9 @@ services:
   mariadb:
     container_name: mariadb
     build: ./requirements/mariadb
+    environment:
+      DB_USER_PWD:  ${DB_USER_PWD}
+      BD_ADMIN_PWD: ${DB_ADMIN_PWD}
     env_file:
       - .env
     volumes:
